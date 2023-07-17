@@ -2,7 +2,7 @@ function convertMarkdownToHTML(markdown) {
   return marked(markdown);
 }
 
-fetch("readme.md")
+fetch("README.md")
   .then((res) => res.text())
   .then((readmeContent) => {
     document.getElementById("readme-content").innerHTML = convertMarkdownToHTML(readmeContent);
